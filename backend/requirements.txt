@@ -1,0 +1,5 @@
+glendale-gis-mcp @ git+https://github.com/HackerFund/GlendaleGisMcp
+fastapi
+python-dotenv
+httpx
+uvicorn

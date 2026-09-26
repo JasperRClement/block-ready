@@ -1,0 +1,14 @@
+# secrets
+.env
+!.env.example
+
+# organizers' GIS server: installed from GitHub (see backend/requirements.txt)
+GlendaleGisMcp/
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
