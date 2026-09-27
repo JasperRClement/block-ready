@@ -2,7 +2,10 @@ import Constants from 'expo-constants';
 
 // In Expo Go the laptop's address is known from the dev server; the backend runs on port 8000
 // of the same machine. Override with EXPO_PUBLIC_API_URL if the backend lives elsewhere.
-const host = Constants.expoConfig?.hostUri?.split(':')[0] ?? 'localhost';
+const host =
+  Constants.expoConfig?.hostUri?.split(':')[0] ??
+  (typeof window !== 'undefined' && window.location?.hostname) ??
+  'localhost';
 export const API = process.env.EXPO_PUBLIC_API_URL ?? `http://${host}:8000`;
 
 export type Level = 0 | 1 | 2 | 3;
